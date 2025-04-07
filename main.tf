@@ -92,7 +92,7 @@ resource "aws_iam_role" "app" {
 }
 
 resource "aws_iam_role_policy_attachments_exclusive" "app" {
-  role_name   = aws_iam_role.app.name
+  role_name = aws_iam_role.app.name
   policy_arns = [
     data.aws_iam_policy.ssm_managed.arn,
     data.aws_iam_policy.database.arn
@@ -106,7 +106,7 @@ resource "aws_iam_role" "web_hosting" {
 }
 
 resource "aws_iam_role_policy_attachments_exclusive" "web_hosting" {
-  role_name   = aws_iam_role.web_hosting.name
+  role_name = aws_iam_role.web_hosting.name
   policy_arns = [
     data.aws_iam_policy.ssm_managed.arn,
     data.aws_iam_policy.s3_ReadOnly.arn
