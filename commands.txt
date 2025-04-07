@@ -1,0 +1,3 @@
+aws iam get-instance-profile --instance-profile-name app-profile | grep InstanceProfile -q && echo "Successfully created app-profile" || echo "Creation of app-profile was unsuccessful"
+
+aws iam get-instance-profile --instance-profile-name web-hosting-profile | grep InstanceProfile -q && echo "Successfully created web-hosting-profile" || echo "Creation of web-hosting-profile was unsuccessful"
